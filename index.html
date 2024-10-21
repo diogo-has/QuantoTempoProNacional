@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quanto tempo falta para o nacional da First?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 style="margin-bottom: 100px;">QUANTO TEMPO FALTA PARA O NACIONAL?</h1>
+    <div class="tempo">
+        <section>
+            <h1 id="dia" class="num"></h1>
+            <h1>DIAS</h1>
+        </section>
+        <section>
+            <h1 id="hora" class="num"></h1>
+            <h1>HORAS</h1>
+        </section>
+        <section>
+            <h1 id="min" class="num"></h1>
+            <h1>MINUTOS</h1>
+        </section>
+        <section>
+            <h1 id="seg" class="num"></h1>
+            <h1>SEGUNDOS</h1>
+        </section>
+    </div>
+    <footer>
+        <!-- <h2>O PRÓXIMO FESTIVAL SESI DE EDUCAÇÃO SERÁ NOS DIAS 12, 13, 14 E 15</h2> -->
+        <h2>O próximo Festival Sesi de Educação ocorrerá do dia 12 ao dia 15 de março de 2025</h2>
+    </footer>
+</body>
+
+<style>
+    * {
+        font-family: "Roboto Condensed", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    h1 {
+        color: white;
+        text-shadow: 0 0 10px black;
+        text-align: center;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://news.mst.edu/files/2022/03/FIRST-Tech.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .num {
+        font-size: 2rem;
+    }
+
+    .tempo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    footer {
+        color: white;
+        text-align: center;
+        font-size: .6rem;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 3px;
+    }
+</style>
+
+<script>
+    var countDownDate = new Date("Mar 12, 2025 00:00:00").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("dia").innerHTML = days;
+        document.getElementById("hora").innerHTML = hours;
+        document.getElementById("min").innerHTML = minutes;
+        document.getElementById("seg").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("dia").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+</html>
