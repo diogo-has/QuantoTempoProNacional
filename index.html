@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quanto tempo falta para o nacional da FIRST?</title>
+    <title>Quanto tempo falta para o nacional da First?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -49,9 +49,11 @@
         color: white;
         text-shadow: 0 0 10px black;
         text-align: center;
+        font-size: 3.6rem;
     }
 
     body {
+        overflow: hidden;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://news.mst.edu/files/2022/03/FIRST-Tech.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -61,11 +63,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
     }
 
     .num {
-        font-size: 2rem;
+        font-size: 6rem;
     }
 
     .tempo {
@@ -79,7 +80,7 @@
     footer {
         color: white;
         text-align: center;
-        font-size: .6rem;
+        font-size: 1.2rem;
         background-color: black;
         position: absolute;
         bottom: 0;
@@ -92,6 +93,19 @@
             flex-direction: column;
             gap: 30px;
         }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .num {
+            font-size: 3rem;
+        }
+
+        footer {
+            font-size: .7rem;
+        }
+
     }
 
 </style>
