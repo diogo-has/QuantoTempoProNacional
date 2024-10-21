@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1 style="margin-bottom: 100px;">QUANTO TEMPO FALTA PARA O NACIONAL?</h1>
+    <h1 style="margin-bottom: 70px;">QUANTO TEMPO FALTA PARA O NACIONAL?</h1>
     <div class="tempo">
         <section>
             <h1 id="dia" class="num"></h1>
@@ -72,7 +72,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 80px;
     }
 
     footer {
@@ -85,6 +85,14 @@
         width: 100%;
         padding: 3px;
     }
+
+    @media screen and (max-width: 600px) {
+        .tempo {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
 </style>
 
 <script>
